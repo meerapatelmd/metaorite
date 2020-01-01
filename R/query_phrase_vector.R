@@ -6,8 +6,22 @@
 
 
 query_phrase_vector <-
-        function(vector) {
-                sql_statement <- paste0("SELECT * FROM MRCONSO WHERE STR IN (",paste(paste0("'", vector, "'"), collapse =  ", "), ");")
-                resultset <- mySeagull::get_query("umls", sql_statement = sql_statement)
-                return(resultset)
+        function(vector, limit_per_phrase = NULL) {
+                if (is.null(limit_per_phrase)) {
+                        sql_statement <- paste0("SELECT * FROM MRCONSO WHERE STR IN (",paste(paste0("'", vector, "'"), collapse =  ", "), ");")
+                        resultset <- mySeagull::get_query("umls", sql_statement = sql_statement)
+                        return(resultset)
+                } else {
+                        sql_statements <-
+                        vector %>%
+                                purrr::map(function(x) paste0("SELECT * FROM MRCONSO WHERE STR = '", x, "' LIMIT ", limit_per_phrase, ";"))
+
+                        resultset <-
+                        sql_statements %>%
+                                purrr::map(mySeagull::get_query, dbname = "umls") %>%
+                                dplyr::bind_rows()
+
+                        return(resultset)
+                }
+
         }

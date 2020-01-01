@@ -4,7 +4,7 @@
 \alias{query_cui_vector}
 \title{Filters MRCONSO table for CUI values that exactly match values in the argument vector}
 \usage{
-query_cui_vector(vector)
+query_cui_vector(vector, limit_per_cui = NULL)
 }
 \arguments{
 \item{vector}{vector of CUIs for IN statement in SQL query}

@@ -4,7 +4,7 @@
 \alias{query_phrase_vector}
 \title{Filters MRCONSO table for STR values that exactly match values in the argument vector}
 \usage{
-query_phrase_vector(vector)
+query_phrase_vector(vector, limit_per_phrase = NULL)
 }
 \arguments{
 \item{vector}{vector of strings for IN statement in SQL query}
