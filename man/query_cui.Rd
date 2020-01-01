@@ -7,9 +7,9 @@
 query_cui(cui, limit = NULL)
 }
 \arguments{
-\item{limit}{LIMIT in the sql statement. If NULL, all records will be returned.}
+\item{cui}{C-prefixed CUI from metathesaurus}
 
-\item{umls_cui}{C-prefixed CUI from metathesaurus}
+\item{limit}{LIMIT in the sql statement. If NULL, all records will be returned.}
 }
 \value{
 resultset from SQL query
