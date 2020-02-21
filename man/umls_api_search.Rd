@@ -13,7 +13,7 @@ umls_api_search(string)
 a list of dataframes from one of each of the following search types: "exact","words","leftTruncation", "rightTruncation", "approximate", "normalizedString", "normalizedWords"
 }
 \description{
-##searchType Parameter Behaviors
+searchType Parameter Behaviors
 * words: breaks a search term into its component parts, or words, and retrieves all concepts containing any of those words. For example: If you enter “Heart Disease, Acute” a Word search will retrieve all concepts containing any of the three words (heart, or disease, or acute).
 * approximate: applies lexical variant generation (LVG) rules to the search term and generally results in expanded retrieval of concepts. For example, a search for the term “cold” retrieves all concepts that contain any of the following words: COLDs, chronic obstructive lung disease, chronic obstructive lung diseases, cold, colder, coldest.
 * exact: retrieves only concepts that include a synonym that exactly matches the search term.
