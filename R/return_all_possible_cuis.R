@@ -1,7 +1,7 @@
 #' Returns all possible atoms associated with a single phrase search, either like or exact
 #' @param phrase phrase to be searched
 #' @param search_type like for double-ended wildcards in the SQL statement; exact for an exact match
-#' @importFrom typewriteR tell_me
+#' @importFrom secretary typewrite
 #' @export
 
 
@@ -11,7 +11,7 @@ return_all_possible_cuis <-
                  limit = NULL) {
 
                 if (!(search_type %in% c("like", "exact"))) {
-                        typewriteR::tell_me("`", search_type, "` is not a valid argument. Please try again. ")
+                        secretary::typewrite("`", search_type, "` is not a valid argument. Please try again. ")
                 } else {
                         if (search_type == "like") {
                                 resultset_a <- query_phrase_combo(phrase = phrase, limit = limit)

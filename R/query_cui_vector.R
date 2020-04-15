@@ -1,6 +1,8 @@
 #' Filters MRCONSO table for CUI values that exactly match values in the argument vector
 #' @param vector vector of CUIs for IN statement in SQL query
 #' @return resultSet where CUI IN vector argument
+#' @importFrom purrr map
+#' @importFrom dplyr bind_rows
 #' @export
 
 query_cui_vector <-

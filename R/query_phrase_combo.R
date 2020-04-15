@@ -1,7 +1,4 @@
 #' Query based on search terms
-#' @importFrom mySeagull get_query
-#' @import dplyr
-#' @import rubix
 #' @export
 
 query_phrase_combo <-
@@ -23,6 +20,6 @@ query_phrase_combo <-
                         sql_statement <- paste0(sql_statement, " LIMIT ", limit, ";")
                 }
 
-                resultset <- mySeagull::get_query("umls", sql_statement = sql_statement)
+                resultset <- submit_query(sql_statement = sql_statement)
                 return(resultset)
         }
