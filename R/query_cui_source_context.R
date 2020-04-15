@@ -1,5 +1,4 @@
 #' Query for source definition
-#' @import mySeagull
 #' @export
 
 query_cui_source_context <-
@@ -7,6 +6,6 @@ query_cui_source_context <-
                 sql_statement <-
                         paste0("SELECT * FROM MRHIER WHERE CUI = '", cui, "';")
 
-                output <- mySeagull::get_query("umls", sql_statement)
+                output <- submit_query(sql_statement)
                 return(output)
         }

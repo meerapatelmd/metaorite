@@ -2,8 +2,7 @@
 #' @param cui C-prefixed CUI from metathesaurus
 #' @param limit LIMIT in the sql statement. If NULL, all records will be returned.
 #' @return resultset from SQL query
-#' @importFrom mySeagull get_query
-#' @importFrom rubix call_mr_clean
+#' @importFrom DBI dbGetQuery
 #' @export
 
 query_cui <-
@@ -17,7 +16,7 @@ query_cui <-
                                                                         LAT = 'ENG' AND ISPREF = 'Y' LIMIT ", limit, ";")
                 }
 
-                cohort <- mySeagull::get_query("umls", sql_statement)
+                submit_query(sql_statement = sql_statement)
 
-                return(cohort %>% rubix::call_mr_clean())
+                return(resultset)
         }
