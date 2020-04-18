@@ -16,7 +16,7 @@ query_cui <-
                                                                         LAT = 'ENG' AND ISPREF = 'Y' LIMIT ", limit, ";")
                 }
 
-                submit_query(sql_statement = sql_statement)
+                resultset <- submit_query(sql_statement = sql_statement)
 
                 return(resultset)
         }
