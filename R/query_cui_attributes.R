@@ -3,9 +3,12 @@
 
 query_cui_attributes <-
         function(cui) {
-                sql_statement <-
-                        paste0("SELECT * FROM MRSAT WHERE STYPE = 'CUI' AND CUI = '", cui, "';")
-
-                output <- submit_query(sql_statement)
+                base <- system.file(package = "metaorite")
+                path <- paste0(base, "/sql/mrsatAttributes.sql")
+                sql_statement <- 
+                    SqlRender::render(SqlRender::readSql(path),
+                                      cui = cui)
+                
+                output <- submitQuery(sql_statement)
                 return(output)
         }
