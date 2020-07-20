@@ -1,7 +1,7 @@
 #' Query for source definition
 #' @export
 
-queryCUIAttributes <-
+queryAttributes <-
         function(cui) {
                 base <- system.file(package = "metaorite")
                 path <- paste0(base, "/sql/mrsatAttributes.sql")
