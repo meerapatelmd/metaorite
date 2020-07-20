@@ -2,8 +2,8 @@ Package: metaorite
 Type: Package
 Title: metaorite Package
 Version: 0.1.0
-Author: Meera Patel, MD
-Maintainer: Meera Patel, MD <patelmeeray@gmail.com>
+Authors@R: 
+    person(given = "Meera", family = "Patel, MD", role = c("aut", "cre"), email = "patelmeeray@gmail.com")
 Description: This package provides functions to rapidly query the UMLS Metathesaurus META and NET outputs instantiated on a local MySQL5.5 server.
 License: Apache License 2.0
 Encoding: UTF-8
