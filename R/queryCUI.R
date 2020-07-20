@@ -11,7 +11,6 @@ queryCUI <-
             
                     base <- system.file(package = "metaorite")
                     path <- paste0(base, "/sql")
-                    path <- paste0(path, "/queryCUI.sql")
 
                 if (is.null(limit_n)) {
                         path <- paste0(path, "/queryCUI.sql")
