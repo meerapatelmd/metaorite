@@ -25,8 +25,14 @@ queryCUI <-
                                               cui = cui,
                                               n = limit_n)
                 }
-
-                resultset <- submitQuery(sql_statement = sql_statement)
+                    
+                resultset <- loadCacheSQL(sql_statement = sql_statement)
+                
+                if (is.null(resultset)) {
+                        resultset <- submitQuery(sql_statement = sql_statement)
+                        cacheSQL(object = resultset,
+                                 sql_statement = sql_statement)
+                }
 
                 return(resultset)
         }
