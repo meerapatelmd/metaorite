@@ -1,6 +1,6 @@
 Package: metaorite
 Type: Package
-Title: Queries UMLS Metathesaurus Database
+Title: metaorite Package
 Version: 0.1.0
 Author: Meera Patel, MD
 Maintainer: Meera Patel, MD <patelmeeray@gmail.com>

@@ -5,7 +5,7 @@
 #' @import secretary
 #' @export
 
-search_cui <-
+searchCUI <-
         function(cui) {
 
                 output <- loadCacheCUIResponse(cui = cui)
