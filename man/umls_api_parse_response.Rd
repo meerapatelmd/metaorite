@@ -4,7 +4,7 @@
 \alias{umls_api_parse_response}
 \title{Takes the response object from the UMLS API Call and parses it into a dataframe}
 \usage{
-umls_api_parse_response(umls_api_response)
+umls_api_parse_response(umls_api_response, search_type)
 }
 \arguments{
 \item{umls_api_response}{response object from a call to the UMLS API}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/umls_api_auth.R
 \name{umls_api_auth}
 \alias{umls_api_auth}
-\title{Authenticate UMLS REST API by 1) Generate TGT that is valid for 8 hours, 2) Generate a Service Ticket using TGT that is valid for 5 minutes. Use Service Ticket to make API calls.}
+\title{Authenticate UMLS REST API}
 \usage{
 umls_api_auth()
 }
@@ -10,5 +10,5 @@ umls_api_auth()
 service ticket valid for up to 5 minutes or when a single API call is made
 }
 \description{
-Authenticate UMLS REST API by 1) Generate TGT that is valid for 8 hours, 2) Generate a Service Ticket using TGT that is valid for 5 minutes. Use Service Ticket to make API calls.
+UMLS REST API is authenticated by 1) Generating a TGT that is valid for 8 hours, 2) Generate a Service Ticket using TGT that is valid for 5 minutes. The Service Ticket is then used to to make API calls.
 }
