@@ -2,7 +2,7 @@
 #' @importFrom dplyr filter
 #' @export
 
-filter_for_nci <-
+filter_for_pt <-
         function(mrconso_df) {
                 x <-
                         mrconso_df %>%
