@@ -2,12 +2,12 @@
 % Please edit documentation in R/mth_documentation_functions.R
 \name{get_fields_to_table_map}
 \alias{get_fields_to_table_map}
-\title{Map all the MTH Fields to the Table
+\title{Get a Map From Fields to Tables
  \code{\link[tibble]{tribble}}}
 \usage{
 get_fields_to_table_map()
 }
 \description{
-Map all the MTH Fields to the Table
+Get a Map From Fields to Tables
  \code{\link[tibble]{tribble}}
 }

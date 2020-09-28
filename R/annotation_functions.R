@@ -12,7 +12,7 @@ NULL
 
 
 #' @title
-#' Annotation Field Values
+#' Annotate Field Values
 #'
 #' @inherit annotation_functions description
 #' @inheritParams annotation_functions
@@ -83,7 +83,7 @@ annotate_field_values <-
 
 
 #' @title
-#' Annotation Field Values
+#' Annotate the SAB Field
 #'
 #' @inherit annotation_functions description
 #' @inheritParams annotation_functions

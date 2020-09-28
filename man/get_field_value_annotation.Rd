@@ -2,7 +2,7 @@
 % Please edit documentation in R/mth_documentation_functions.R
 \name{get_field_value_annotation}
 \alias{get_field_value_annotation}
-\title{Annotate Field Values with Details in UMLS Documentation}
+\title{Annotate Field Values with Details}
 \usage{
 get_field_value_annotation()
 }

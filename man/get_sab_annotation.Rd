@@ -2,7 +2,7 @@
 % Please edit documentation in R/mth_documentation_functions.R
 \name{get_sab_annotation}
 \alias{get_sab_annotation}
-\title{Annotate the SAB Field with Vocabulary details}
+\title{Get Vocabulary Details to Annotate SAB Fields}
 \usage{
 get_sab_annotation()
 }

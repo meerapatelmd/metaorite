@@ -2,7 +2,7 @@
 % Please edit documentation in R/mth_documentation_functions.R
 \name{get_field_definitions}
 \alias{get_field_definitions}
-\title{Get the definitions of al the Metathesaurus Fields}
+\title{Get All Available Field Definitions}
 \usage{
 get_field_definitions()
 }

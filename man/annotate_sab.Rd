@@ -2,12 +2,12 @@
 % Please edit documentation in R/annotation_functions.R
 \name{annotate_sab}
 \alias{annotate_sab}
-\title{Annotation Field Values}
+\title{Annotate the SAB Field}
 \usage{
 annotate_sab(data)
 }
 \description{
-Annotation Field Values
+Annotate the SAB Field
 }
 \details{
 The annotations used in this function are derived from \code{\link{get_sab_annotation}}.

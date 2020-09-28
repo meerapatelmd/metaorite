@@ -2,7 +2,7 @@
 % Please edit documentation in R/annotation_functions.R
 \name{annotate_field_values}
 \alias{annotate_field_values}
-\title{Annotation Field Values}
+\title{Annotate Field Values}
 \usage{
 annotate_field_values(data, ...)
 }
@@ -10,7 +10,7 @@ annotate_field_values(data, ...)
 \item{...}{(optional) Columns in the data to annotate. If missing, all available annotations are provided for every column.}
 }
 \description{
-Annotation Field Values
+Annotate Field Values
 }
 \details{
 These annotations are derived from \code{\link{get_field_value_annotations}}

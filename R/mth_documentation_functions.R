@@ -9,7 +9,7 @@
 NULL
 
 #' @title
-#' List the Human Readable Names of MTH Tables
+#' List the Human Readable Names for the Tables
 #' @seealso
 #'  \code{\link[tibble]{tribble}}
 #' @export
@@ -42,7 +42,7 @@ get_readable_table_names <-
         }
 
 #' @title
-#' Get the definitions of the MRCONSO Table
+#' Get Field Definitions for the MRCONSO Table
 #' @seealso
 #'  \code{\link[tibble]{tribble}}
 #' @export
@@ -74,7 +74,7 @@ Root Source Abbreviation (RSAB) — short form, no version information, for exam
 
 
 #' @title
-#' Get the definitions of al the Metathesaurus Fields
+#' Get All Available Field Definitions
 #'
 #' @description
 #' Sourced from \href{https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html}{https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html}
@@ -215,7 +215,7 @@ get_field_definitions <-
         }
 
 #' @title
-#' Map all the MTH Fields to the Table
+#' Get a Map From Fields to Tables
 #'  \code{\link[tibble]{tribble}}
 #' @export
 #' @importFrom tibble tribble
@@ -556,7 +556,7 @@ get_fields_to_table_map <-
         }
 
 #' @title
-#' Annotate the SAB Field with Vocabulary details
+#' Get Vocabulary Details to Annotate SAB Fields
 #'
 #' @description
 #' Get Maps Between the SAB where the Vocabulary is referred to by Abbreviation. Expansion is sourced from \href{https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html}{https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html}
@@ -792,7 +792,7 @@ get_sab_annotation <-
 
 
 #' @title
-#' Annotate Field Values with Details in UMLS Documentation
+#' Annotate Field Values with Details
 #'
 #' @description
 #' Get Maps Between Field-Value Pairs where the Value is abbreviated as show at \href{https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html}{https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html}.

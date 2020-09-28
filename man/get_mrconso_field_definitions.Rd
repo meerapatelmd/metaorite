@@ -2,12 +2,12 @@
 % Please edit documentation in R/mth_documentation_functions.R
 \name{get_mrconso_field_definitions}
 \alias{get_mrconso_field_definitions}
-\title{Get the definitions of the MRCONSO Table}
+\title{Get Field Definitions for the MRCONSO Table}
 \usage{
 get_mrconso_field_definitions()
 }
 \description{
-Get the definitions of the MRCONSO Table
+Get Field Definitions for the MRCONSO Table
 }
 \seealso{
 \code{\link[tibble]{tribble}}

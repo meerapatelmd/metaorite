@@ -2,12 +2,12 @@
 % Please edit documentation in R/mth_documentation_functions.R
 \name{get_readable_table_names}
 \alias{get_readable_table_names}
-\title{List the Human Readable Names of MTH Tables}
+\title{List the Human Readable Names for the Tables}
 \usage{
 get_readable_table_names()
 }
 \description{
-List the Human Readable Names of MTH Tables
+List the Human Readable Names for the Tables
 }
 \seealso{
 \code{\link[tibble]{tribble}}
