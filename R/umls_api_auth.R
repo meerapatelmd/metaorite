@@ -9,6 +9,8 @@
 
 umls_api_auth <- function() {
 
+        .Deprecated(package = "meerapatelmd/callmemaybe")
+
         ##Getting TGT from saved file at ~/.umls_auth_tgt.txt and makes API call to retrieve one if it is expired or the file does not exist
 
         if (!file.exists("~/.umls_auth_tgt.txt")) {
