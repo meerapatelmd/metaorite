@@ -1,7 +1,7 @@
 Type: Package
 Package: metaorite
 Title: metaorite Package
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: 
     person(given = "Meera",
            family = "Patel, MD",
@@ -12,7 +12,24 @@ Description:  Query a Postgres Instance of the UMLS
     Metathesaurus. For MySQL5.5, see the metaoriteSQL package.
 License: Apache License 2.0
 Imports: 
-    magrittr
+    magrittr,
+    rvest,
+    xml2,
+    R.cache,
+    SqlRender,
+    dplyr,
+    purrr,
+    stringr,
+    tibble,
+    broca,
+    pg13,
+    rubix,
+    secretary
+Remotes: 
+     meerapatelmd/broca,
+     meerapatelmd/pg13,
+     meerapatelmd/rubix,
+     meerapatelmd/secretary
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
