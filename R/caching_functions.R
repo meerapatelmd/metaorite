@@ -2,12 +2,12 @@
 #' @import R.cache
 #' @export
 
-cacheSQL <-
+cache_sql <-
     function(object, sql_statement) {
 
         R.cache::saveCache(object = object,
                            key = list(sql_statement),
-                           dirs = "umls")
+                           dirs = "metaorite")
 
     }
 
@@ -16,10 +16,10 @@ cacheSQL <-
 #' @import R.cache
 #' @export
 
-loadCacheSQL <-
+load_cached_sql <-
     function(sql_statement) {
 
         R.cache::loadCache(key = list(sql_statement),
-                           dirs = "umls")
+                           dirs = "metaorite")
 
     }

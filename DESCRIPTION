@@ -4,7 +4,8 @@ Title: metaorite Package
 Version: 0.1.0
 Authors@R: 
     person(given = "Meera", family = "Patel, MD", role = c("aut", "cre"), email = "patelmeeray@gmail.com")
-Description: This package provides functions to rapidly query the UMLS Metathesaurus META and NET outputs instantiated on a local MySQL5.5 server.
+Description: 
+    Query a Postgres Instance of the UMLS Metathesaurus. For MySQL5.5, see the metaoriteSQL package.
 License: Apache License 2.0
 Encoding: UTF-8
 LazyData: true
