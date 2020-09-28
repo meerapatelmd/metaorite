@@ -1,5 +1,5 @@
 #' Cache SQL Statement
-#' @import R.cache
+#' @importFrom R.cache saveCache
 #' @export
 
 cache_sql <-
@@ -13,7 +13,7 @@ cache_sql <-
 
 
 #' Load Cached SQL Statement
-#' @import R.cache
+#' @importFrom R.cache loadCache
 #' @export
 
 load_cached_sql <-

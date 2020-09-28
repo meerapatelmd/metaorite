@@ -12,12 +12,13 @@
 #' @importFrom broca makeTribble
 #' @importFrom secretary press_enter
 #' @name documentation_scraping_functions
+#' @noRd
 NULL
 
 #' @title
 #' Scrape Field Value Annotations
 #' @inherit documentation_scraping_functions title description
-#' @keywords internal
+#' @noRd
 
 scrape_field_value_annotations <-
         function() {
@@ -70,7 +71,7 @@ scrape_field_value_annotations <-
 #' @title
 #' Scrape Vocabulary Annotations
 #' @inherit documentation_scraping_functions title description
-#' @keywords internal
+#' @noRd
 
 scrape_vocabulary_annotations <-
         function() {
