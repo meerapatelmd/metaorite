@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Search for a Like Match — search_string" />
-<meta property="og:description" content="These functions help search for mappings between an a concept and a Metathesaurus identifier in the MRCONSO Table. All queries are cached using the R.cache package for quicker retrieval of the more computationally expensive searches." />
+<meta property="og:description" content="Search for a Like Match" />
 
 
 
@@ -109,7 +109,7 @@
     </div>
 
     <div class="ref-description">
-    <p>These functions help search for mappings between an a concept and a Metathesaurus identifier in the MRCONSO Table. All queries are cached using the R.cache package for quicker retrieval of the more computationally expensive searches.</p>
+    <p>Search for a Like Match</p>
     </div>
 
     <pre class="usage"><span class='fu'>search_string</span><span class='op'>(</span>
@@ -127,42 +127,11 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>conn</th>
-      <td><p>Postgres connection</p></td>
-    </tr>
-    <tr>
-      <th>concept</th>
-      <td><p>Concept to be searched</p></td>
-    </tr>
-    <tr>
       <th>split</th>
       <td><p>Regular expression to split the concept on to generate words for this style of search. Defaults to a space.</p></td>
     </tr>
-    <tr>
-      <th>schema</th>
-      <td><p>Metathesaurus schema</p></td>
-    </tr>
-    <tr>
-      <th>match_case</th>
-      <td><p>If TRUE, both the MRCONSO STR column and the `concept` argument are converted to lowercase.</p></td>
-    </tr>
-    <tr>
-      <th>cache_only</th>
-      <td><p>If TRUE, only the cache is loaded and database querying is skipped. If a cache did not exist for the query, a NULL will be returned.</p></td>
-    </tr>
-    <tr>
-      <th>skip_cache</th>
-      <td><p>If TRUE, the cache is skipped altogether. The database is directly queried and the resultset is not cached.</p></td>
-    </tr>
-    <tr>
-      <th>override_cache</th>
-      <td><p>If TRUE, the cache is not loaded, the database is directly queried and the resultset is cached, overwriting any existing cache that may have been present.</p></td>
-    </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Dataframe of 0 or more rows of all the fields in the MRCONSO Table.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>A 'String' style of search splits the concept into a vector of length 1 or greater based on the `split` argument. Seaches of this style will return all matches where all the results of the split were present.</p>
@@ -170,7 +139,6 @@
 
     <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/pg13/man/buildQueryString.html'>buildQueryString</a></code>,<code><a href='https://rdrr.io/pkg/pg13/man/query.html'>query</a></code></p>
 <p>Other search mrconso: 
-<code><a href='mrconso_search_functions.html'>mrconso_search_functions</a></code>,
 <code><a href='search_exact.html'>search_exact</a>()</code>,
 <code><a href='search_like.html'>search_like</a>()</code></p></div>
 

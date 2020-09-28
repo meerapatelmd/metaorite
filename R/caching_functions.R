@@ -1,6 +1,6 @@
 #' Cache SQL Statement
 #' @importFrom R.cache saveCache
-#' @export
+#' @noRd
 
 cache_sql <-
     function(object, sql_statement) {
@@ -14,7 +14,7 @@ cache_sql <-
 
 #' Load Cached SQL Statement
 #' @importFrom R.cache loadCache
-#' @export
+#' @noRd
 
 load_cached_sql <-
     function(sql_statement) {
