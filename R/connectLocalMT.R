@@ -5,7 +5,6 @@
 
 connectLocalMT <-
         function () {
-            .Deprecated()
             preQL::connectMySQL5.5(dbname = "umls",
                                    username = Sys.getenv("umls_username"),
                                    password = Sys.getenv("umls_password"))
