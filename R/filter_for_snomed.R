@@ -9,9 +9,3 @@ filter_for_snomed <-
                         dplyr::filter(SAB == "SNOMEDCT_US")
                 return(x)
         }
-
-
-
-## Map Sab to Athena
-
-broca::view_as_csv(setupMetathesaurus::sab_annotation())
