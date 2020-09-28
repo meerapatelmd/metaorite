@@ -43,7 +43,30 @@ write_temp_table <-
         }
 
 #' @title
-#' Left Join a Temp Table
+#' Makes the JOIN ON portion of SQL Statement
+#'
+#' @noRd
+
+match_join_columns <-
+        function(...) {
+
+                Args <- unlist(...)
+
+                columns_a <- paste0("a.", names(Args))
+                columns_b <- paste0("b.", unname(Args))
+
+                mapply(function(x,y) paste(x, "=", y),
+                       columns_a,
+                       columns_b,
+                       USE.NAMES = FALSE) %>%
+                        paste(collapse = " AND ")
+
+        }
+
+
+#' @title
+#' Render the SQL to Left Join on a Temp Table
+#' @importFrom SqlRender render
 #' @noRd
 
 render_left_join <-
@@ -57,7 +80,7 @@ render_left_join <-
 
                 fields <- paste(fields, collapse = ",")
 
-                joinStatement <- match_columns(...)
+                joinStatement <- match_join_columns(...)
 
                 SqlRender::render(
                                 "SELECT @fields
@@ -75,19 +98,6 @@ render_left_join <-
 
 
 
-match_columns <-
-        function(...) {
-                Args <- unlist(...)
-                columns_a <- paste0("a.", names(Args))
-                columns_b <- paste0("b.", unname(Args))
-
-                mapply(function(x,y) paste(x, "=", y),
-                       columns_a,
-                       columns_b,
-                       USE.NAMES = FALSE) %>%
-                        paste(collapse = " AND ")
-
-        }
 
 #' @title
 #' Drops all Temp Tables
