@@ -296,15 +296,30 @@ search_string <-
 #' This function performs a combination of searches using the \code{\link{search_mrconso_functions}} on a `concept`. The resultsets are then rejoined back onto the MRCONSO to get all possible strings. The direction is therefore from the `concept` to the CUI it matches and then from the CUI back to all the STR values that belong to the CUI. The types of search to use depends on the `concept`. For example, a very long gene name may not have an exact match, but may have very high yield 'string' matches because of the number of unique words. A 'like' match may be the least ideal since it casts a wide net in the search and the return may be to wide in breadth to search the use case.
 #'
 #' @return
-#' The results of the search will have all the fields from the MRCONSO Table, + search_type
+#' The results of the search will have all the fields from the MRCONSO Table with an additional Search Type column indicating what search type the CUI was the result of.
 #'
+#' @inheritParams mrconso_search_functions
+#' @inheritParams search_string
+#' @param search_styles One or more of "exact", "string", and/or "like" search styles that correspond with the \code{\link{search_exact}}, \code{\link{search_string}}, and \code{\link{search_like}} functions respectively.
+#'
+#' @seealso
+#'  \code{\link[tibble]{tibble}}
+#'  \code{\link[dplyr]{bind}},\code{\link[dplyr]{mutate}},\code{\link[dplyr]{select}},\code{\link[dplyr]{distinct}}
+#'  \code{\link[SqlRender]{render}}
+#'  \code{\link[pg13]{query}}
+#' @rdname search_synonym
+#' @export
+#' @importFrom tibble tibble
+#' @importFrom dplyr bind_rows mutate select distinct
+#' @importFrom SqlRender render
+#' @importFrom pg13 query
 
 
 search_synonym <-
         function(conn,
                  concept,
                  schema = "mth",
-                 search_types = c("exact", "string", "like"),
+                 search_styles = c("exact", "string", "like"),
                  split = " ",
                  match_case = TRUE,
                  cache_only = FALSE,
@@ -314,7 +329,7 @@ search_synonym <-
 
                 resultset <- tibble::tibble()
 
-                if ("exact" %in% search_types) {
+                if ("exact" %in% search_styles) {
 
                          resultset <-
                                  dplyr::bind_rows(resultset,
@@ -325,12 +340,12 @@ search_synonym <-
                                                                      cache_only = cache_only,
                                                                      skip_cache = skip_cache,
                                                                      override_cache = override_cache) %>%
-                                                        dplyr::mutate(search_type = "exact")
+                                                        dplyr::mutate(search_style = "exact")
                                  )
 
                 }
 
-                if ("like" %in% search_types) {
+                if ("like" %in% search_styles) {
 
                         resultset <-
                                 dplyr::bind_rows(resultset,
@@ -341,13 +356,13 @@ search_synonym <-
                                                               cache_only = cache_only,
                                                               skip_cache = skip_cache,
                                                               override_cache = override_cache) %>%
-                                                         dplyr::mutate(search_type = "like")
+                                                         dplyr::mutate(search_style = "like")
                                 )
 
                 }
 
 
-                if ("string" %in% search_types) {
+                if ("string" %in% search_styles) {
 
                         resultset <-
                                 dplyr::bind_rows(resultset,
@@ -359,7 +374,7 @@ search_synonym <-
                                                              cache_only = cache_only,
                                                              skip_cache = skip_cache,
                                                              override_cache = override_cache) %>%
-                                                         dplyr::mutate(search_type = "string")
+                                                         dplyr::mutate(search_style = "string")
                                 )
 
                 }
@@ -369,12 +384,12 @@ search_synonym <-
                         write_temp_table(conn = conn,
                                          schema = schema,
                                          data = resultset %>%
-                                                 dplyr::select(resultset_cui = cui, search_type) %>%
+                                                 dplyr::select(resultset_cui = cui, search_style) %>%
                                                  dplyr::distinct())
 
                 sql_statement <-
                         SqlRender::render(
-                                "SELECT a.search_type, b.*
+                                "SELECT a.search_style, b.*
                                 FROM @schema.@tempTableName a
                                 LEFT JOIN mth.mrconso b
                                 ON a.resultset_cui = b.cui;",

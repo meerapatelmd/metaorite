@@ -30,7 +30,7 @@ search_like(
 \item{override_cache}{If TRUE, the cache is not loaded, the database is directly queried and the resultset is cached, overwriting any existing cache that may have been present.}
 }
 \value{
-Dataframe of 0 or more rows
+Dataframe of 0 or more rows of all the fields in the MRCONSO Table.
 }
 \description{
 These functions help search for mappings between an a concept and a Metathesaurus identifier in the MRCONSO Table. All queries are cached using the R.cache package for quicker retrieval of the more computationally expensive searches.

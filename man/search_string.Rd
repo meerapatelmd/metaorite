@@ -10,6 +10,7 @@ search_string(
   split = " ",
   schema = "mth",
   match_case = TRUE,
+  cache_only = FALSE,
   skip_cache = FALSE,
   override_cache = FALSE
 )
@@ -25,12 +26,14 @@ search_string(
 
 \item{match_case}{If TRUE, both the MRCONSO STR column and the `concept` argument are converted to lowercase.}
 
+\item{cache_only}{If TRUE, only the cache is loaded and database querying is skipped. If a cache did not exist for the query, a NULL will be returned.}
+
 \item{skip_cache}{If TRUE, the cache is skipped altogether. The database is directly queried and the resultset is not cached.}
 
 \item{override_cache}{If TRUE, the cache is not loaded, the database is directly queried and the resultset is cached, overwriting any existing cache that may have been present.}
 }
 \value{
-Dataframe of 0 or more rows
+Dataframe of 0 or more rows of all the fields in the MRCONSO Table.
 }
 \description{
 These functions help search for mappings between an a concept and a Metathesaurus identifier in the MRCONSO Table. All queries are cached using the R.cache package for quicker retrieval of the more computationally expensive searches.
