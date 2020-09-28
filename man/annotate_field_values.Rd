@@ -7,12 +7,10 @@
 annotate_field_values(data, ...)
 }
 \arguments{
-\item{data}{dataframe returned from a Metathesaurus query}
-
 \item{...}{(optional) Columns in the data to annotate. If missing, all available annotations are provided for every column.}
 }
 \description{
-These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.
+Annotation Field Values
 }
 \details{
 These annotations are derived from \code{\link{get_field_value_annotations}}

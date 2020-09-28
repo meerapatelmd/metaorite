@@ -17,6 +17,7 @@
 #'
 #' @name mrconso_search_functions
 #' @family search mrconso
+#' @noRd
 NULL
 
 

@@ -5,6 +5,7 @@
 #' Return the information avaible in the UML Web Documentation in dataframe format
 #'
 #' @name mth_documentation_functions
+#' @noRd
 NULL
 
 #' @title

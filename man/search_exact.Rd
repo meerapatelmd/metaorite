@@ -14,33 +14,14 @@ search_exact(
   override_cache = FALSE
 )
 }
-\arguments{
-\item{conn}{Postgres connection}
-
-\item{concept}{Concept to be searched}
-
-\item{schema}{Metathesaurus schema}
-
-\item{match_case}{If TRUE, both the MRCONSO STR column and the `concept` argument are converted to lowercase.}
-
-\item{cache_only}{If TRUE, only the cache is loaded and database querying is skipped. If a cache did not exist for the query, a NULL will be returned.}
-
-\item{skip_cache}{If TRUE, the cache is skipped altogether. The database is directly queried and the resultset is not cached.}
-
-\item{override_cache}{If TRUE, the cache is not loaded, the database is directly queried and the resultset is cached, overwriting any existing cache that may have been present.}
-}
-\value{
-Dataframe of 0 or more rows of all the fields in the MRCONSO Table.
-}
 \description{
-These functions help search for mappings between an a concept and a Metathesaurus identifier in the MRCONSO Table. All queries are cached using the R.cache package for quicker retrieval of the more computationally expensive searches.
+Search for an Exact Match
 }
 \seealso{
 \code{\link[SqlRender]{render}}
  \code{\link[pg13]{query}}
 
 Other search mrconso: 
-\code{\link{mrconso_search_functions}},
 \code{\link{search_like}()},
 \code{\link{search_string}()}
 }

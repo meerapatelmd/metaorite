@@ -6,11 +6,8 @@
 \usage{
 annotate_sab(data)
 }
-\arguments{
-\item{data}{dataframe returned from a Metathesaurus query}
-}
 \description{
-These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.
+Annotation Field Values
 }
 \details{
 The annotations used in this function are derived from \code{\link{get_sab_annotation}}.
