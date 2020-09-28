@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metaorite</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
       </span>
     </div>
 
@@ -128,195 +128,172 @@
       <tr>
         
         <td>
-          <p><code><a href="cacheCUIResponse.html">cacheCUIResponse()</a></code> </p>
+          <p><code><a href="MRXNS_ENG_def.html">MRXNS_ENG_def()</a></code> </p>
         </td>
-        <td><p>Cache API CUI Response</p></td>
+        <td><p>Normalized String Index (File = MRXNS_ENG.RRF)</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="cacheSQL.html">cacheSQL()</a></code> </p>
+          <p><code><a href="MRXNW_ENG_def.html">MRXNW_ENG_def()</a></code> </p>
+        </td>
+        <td><p>Normalized Word Index (File = MRXNW_ENG.RRF)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="MRXW_def.html">MRXW_def()</a></code> </p>
+        </td>
+        <td><p>Word Index (File = MRXW_BAQ.RRF, MRXW_DAN.RRF, MRXW_DUT.RRF, MRXW_ENG.RRF, MRXW_FIN.RRF, MRXW_FRE.RRF, MRXW_GER.RRF, MRXW_HEB.RRF, MRXW_HUN.RRF, MRXW_ITA.RRF, MRXW_NOR.RRF, MRXW_POR.RRF, MRXW_RUS.RRF, MRXW_SPA.RRF, MRXW_SWE.RRF)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="annotate_field_values.html">annotate_field_values()</a></code> </p>
+        </td>
+        <td><p>Annotation Field Values</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="annotate_sab.html">annotate_sab()</a></code> </p>
+        </td>
+        <td><p>Annotation Field Values</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="annotation_functions.html">annotation_functions</a></code> </p>
+        </td>
+        <td><p>Field Value Annotation Functions</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="cache_sql.html">cache_sql()</a></code> </p>
         </td>
         <td><p>Cache SQL Statement</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="cacheSearchResponse.html">cacheSearchResponse()</a></code> </p>
+          <p><code><a href="get_field_definitions.html">get_field_definitions()</a></code> </p>
         </td>
-        <td><p>Cache API Search Response</p></td>
+        <td><p>Get the definitions of al the Metathesaurus Fields</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="connectLocalMT.html">connectLocalMT()</a></code> </p>
+          <p><code><a href="get_field_value_annotation.html">get_field_value_annotation()</a></code> </p>
         </td>
-        <td><p>Connect to a local Metathesaurus Instance</p></td>
+        <td><p>Annotate Field Values with Details in UMLS Documentation</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="dcLocalMT.html">dcLocalMT()</a></code> </p>
+          <p><code><a href="get_fields_to_table_map.html">get_fields_to_table_map()</a></code> </p>
         </td>
-        <td><p>Disconnect a Local Metathesaurus Instance</p></td>
+        <td><p>Map all the MTH Fields to the Table
+ <code><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></code></p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="dc_local_umls.html">dc_local_umls()</a></code> </p>
+          <p><code><a href="get_mrconso_field_definitions.html">get_mrconso_field_definitions()</a></code> </p>
         </td>
-        <td><p>Disconnect MySQL 5.5 UMLS Database</p></td>
+        <td><p>Get the definitions of the MRCONSO Table</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="filter_for_loinc.html">filter_for_loinc()</a></code> </p>
+          <p><code><a href="get_readable_table_names.html">get_readable_table_names()</a></code> </p>
         </td>
-        <td><p>Filter MRCONSO output for LOINC</p></td>
+        <td><p>List the Human Readable Names of MTH Tables</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="filter_for_nci.html">filter_for_nci()</a></code> </p>
+          <p><code><a href="get_sab_annotation.html">get_sab_annotation()</a></code> </p>
         </td>
-        <td><p>Filter MRCONSO output for NCI</p></td>
+        <td><p>Annotate the SAB Field with Vocabulary details</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="filter_for_pt.html">filter_for_pt()</a></code> </p>
-        </td>
-        <td><p>Filter MRCONSO output for preferred_term</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="filter_for_rxnorm.html">filter_for_rxnorm()</a></code> </p>
-        </td>
-        <td><p>Filter MRCONSO output for RXNORM</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="filter_for_snomed.html">filter_for_snomed()</a></code> </p>
-        </td>
-        <td><p>Filter MRCONSO output for SNOMED</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="loadCacheCUIResponse.html">loadCacheCUIResponse()</a></code> </p>
-        </td>
-        <td><p>Load API CUI Response</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="loadCacheSQL.html">loadCacheSQL()</a></code> </p>
+          <p><code><a href="load_cached_sql.html">load_cached_sql()</a></code> </p>
         </td>
         <td><p>Load Cached SQL Statement</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="loadCacheSearchResponse.html">loadCacheSearchResponse()</a></code> </p>
+          <p><code><a href="mrconso_search_functions.html">mrconso_search_functions</a></code> </p>
         </td>
-        <td><p>Load Cache API Search Response</p></td>
+        <td><p>Search MRCONSO Functions</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="queryAttributes.html">queryAttributes()</a></code> </p>
+          <p><code><a href="mth_documentation_functions.html">mth_documentation_functions</a></code> </p>
         </td>
-        <td><p>Query for source definition</p></td>
+        <td><p>Metathesaurus Documentation Functions</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="queryCUI.html">queryCUI()</a></code> </p>
+          <p><code><a href="mth_file_description_functions.html">mth_file_description_functions</a></code> </p>
         </td>
-        <td><p>Queries cui in UMLS in MRCONSO table of metathesaurus</p></td>
+        <td><p>Metathesaurus File Descriptions</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="queryExact.html">queryExact()</a></code> </p>
+          <p><code><a href="query_cui.html">query_cui()</a></code> </p>
         </td>
-        <td><p>Query based on search terms</p></td>
+        <td><p>Query CUI</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="queryLike.html">queryLike()</a></code> </p>
+          <p><code><a href="query_cui_attributes.html">query_cui_attributes()</a></code> </p>
         </td>
-        <td><p>Query based on search terms</p></td>
+        <td><p>Query for Attributes</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="queryString.html">queryString()</a></code> </p>
+          <p><code><a href="query_cui_relationships.html">query_cui_relationships()</a></code> </p>
         </td>
-        <td><p>String Style Query</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="query_cui_inverse_relationships.html">query_cui_inverse_relationships()</a></code> </p>
-        </td>
-        <td><p>Query for source definition</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="query_cui_relationships.html">query_cui_relationships()</a></code> <code><a href="query_cui_relationships.html">query_cui_relationships()</a></code> </p>
-        </td>
-        <td><p>Query for source definition</p></td>
+        <td><p>Query for relationships</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="query_cui_semantic_types.html">query_cui_semantic_types()</a></code> </p>
         </td>
-        <td><p>Query for source definition</p></td>
+        <td><p>Query for sermantic type</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="query_cui_source_context.html">query_cui_source_context()</a></code> </p>
         </td>
-        <td><p>Query for source definition</p></td>
+        <td><p>Query for source context</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="query_phrase_combo.html">query_phrase_combo()</a></code> </p>
+          <p><code><a href="query_cui_source_definitions.html">query_cui_source_definitions()</a></code> </p>
         </td>
-        <td><p>Query based on search terms</p></td>
+        <td><p>Query for source definitions</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="query_word.html">query_word()</a></code> </p>
         </td>
-        <td><p>Query MRXW_ENG table for word and return matching CUI and SUI values in MRCONSO</p></td>
+        <td><p>Search for a Word in the MRXW Table</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="return_all_possible_cuis.html">return_all_possible_cuis()</a></code> </p>
+          <p><code><a href="search_exact.html">search_exact()</a></code> </p>
         </td>
-        <td><p>Returns all possible atoms associated with a single phrase search, either like or exact</p></td>
+        <td><p>Search for an Exact Match</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="return_all_semantic_types.html">return_all_semantic_types()</a></code> </p>
+          <p><code><a href="search_like.html">search_like()</a></code> </p>
         </td>
-        <td><p>Get all unique semantic types in Metathesaurus</p></td>
+        <td><p>Search for a Like Match</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="searchCUI.html">searchCUI()</a></code> </p>
+          <p><code><a href="search_string.html">search_string()</a></code> </p>
         </td>
-        <td><p>Gets the most current information about a CUI via API call</p></td>
+        <td><p>Search for a Like Match</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="search_api.html">search_api()</a></code> </p>
+          <p><code><a href="search_synonym.html">search_synonym()</a></code> </p>
         </td>
-        <td><p>UMLS API Search of a String</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="submitQuery.html">submitQuery()</a></code> </p>
-        </td>
-        <td><p>Submit Query for data retrieval from local umls</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="umls_api_auth.html">umls_api_auth()</a></code> </p>
-        </td>
-        <td><p>Authenticate UMLS REST API</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="umls_api_parse_response.html">umls_api_parse_response()</a></code> </p>
-        </td>
-        <td><p>Takes the response object from the UMLS API Call and parses it into a dataframe</p></td>
+        <td><p>Search for Synonyms</p></td>
       </tr>
     </tbody>
     </table>
@@ -336,7 +313,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

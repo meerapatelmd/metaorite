@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Search for a Word in the MRXW Table — query_word • metaorite</title>
+<title>Annotation Field Values — annotate_field_values • metaorite</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Search for a Word in the MRXW Table — query_word" />
-<meta property="og:description" content="Unlike the other Search functions that take a `concept` as an argument, this function looks up words and returns all possible matches by CUI and SUI from MRCONSO. More information is available at https://www.nlm.nih.gov/research/umls/implementation_resources/query_diagrams/er6.html." />
+<meta property="og:title" content="Annotation Field Values — annotate_field_values" />
+<meta property="og:description" content="These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation." />
 
 
 
@@ -103,38 +103,37 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Search for a Word in the MRXW Table</h1>
+    <h1>Annotation Field Values</h1>
     
-    <div class="hidden name"><code>query_word.Rd</code></div>
+    <div class="hidden name"><code>annotate_field_values.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Unlike the other Search functions that take a `concept` as an argument, this function looks up words and returns all possible matches by CUI and SUI from MRCONSO. More information is available at https://www.nlm.nih.gov/research/umls/implementation_resources/query_diagrams/er6.html.</p>
+    <p>These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>query_word</span><span class='op'>(</span><span class='va'>conn</span>, <span class='va'>schema</span>, <span class='va'>word</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>annotate_field_values</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>conn</th>
-      <td><p>Database connection</p></td>
+      <th>data</th>
+      <td><p>dataframe returned from a Metathesaurus query</p></td>
     </tr>
     <tr>
-      <th>schema</th>
-      <td><p>Metathesaurus schema</p></td>
-    </tr>
-    <tr>
-      <th>word</th>
-      <td><p>Word to search</p></td>
+      <th>...</th>
+      <td><p>(optional) Columns in the data to annotate. If missing, all available annotations are provided for every column.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>These annotations are derived from <code>get_field_value_annotations</code></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/pg13/man/query.html'>query</a></code>
- <code><a href='https://rdrr.io/pkg/SqlRender/man/render.html'>render</a></code></p></div>
+    <div class='dont-index'><p><code><a href='https://dplyr.tidyverse.org/reference/mutate_all.html'>mutate_all</a></code>,<code><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></code>,<code><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>mutate-joins</a></code>
+ <code><a href='https://purrr.tidyverse.org/reference/reduce.html'>reduce</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
