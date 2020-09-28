@@ -216,7 +216,6 @@ get_field_definitions <-
 
 #' @title
 #' Get a Map From Fields to Tables
-#'  \code{\link[tibble]{tribble}}
 #' @export
 #' @importFrom tibble tribble
 
