@@ -1,6 +1,10 @@
 #' @title
-#' Metathesaurus Data Definitions
-#' @name mth_data_definition_functions
+#' Metathesaurus Documentation Functions
+#'
+#' @description
+#' Return the information avaible in the UML Web Documentation in dataframe format
+#'
+#' @name mth_documentation_functions
 NULL
 
 #' @title
@@ -10,7 +14,7 @@ NULL
 #' @export
 #' @importFrom tibble tribble
 
-view_readable_table_names <-
+get_readable_table_names <-
         function() {
                 tibble::tribble(
                         ~Table,~RRF,
@@ -43,7 +47,7 @@ view_readable_table_names <-
 #' @export
 #' @importFrom tibble tribble
 
-mrconso_field_definitions <-
+get_mrconso_field_definitions <-
         function() {
                 tibble::tribble(~Col,~Description,
                                 "CUI", "Unique identifier for concept",
@@ -79,7 +83,7 @@ Root Source Abbreviation (RSAB) — short form, no version information, for exam
 #' @export
 #' @importFrom tibble tribble
 
-all_mth_field_definitions <-
+get_field_definitions <-
         function() {
                 tibble::tribble(
                 ~Abbreviation,~Description,~Datatype,
@@ -215,7 +219,7 @@ all_mth_field_definitions <-
 #' @export
 #' @importFrom tibble tribble
 
-mth_fields_to_tables <-
+get_fields_to_table_map <-
         function() {
                 tibble::tribble(
                 ~Abbreviation,~Table,
@@ -561,7 +565,7 @@ mth_fields_to_tables <-
 #' @export
 #' @importFrom tibble tribble
 
-sab_annotation <-
+get_sab_annotation <-
         function() {
                 tibble::tribble(
                 ~`Vocabulary`,~`Abbreviation`,~`Last Updated`,~`Language`,~`Restriction Level`,
@@ -796,7 +800,7 @@ sab_annotation <-
 #' @export
 #' @importFrom tibble tribble
 
-field_annotation <-
+get_field_value_annotation <-
         function() {
                 list(
                         CXTY = tibble::tribble(
