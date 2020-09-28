@@ -8,28 +8,30 @@ Authors@R:
            role = c("aut", "cre"),
            email = "patelmeeray@gmail.com",
            comment = c(ORCID = "0000-0002-3401-3948"))
-Description:  Query a Postgres Instance of the UMLS
-    Metathesaurus. For MySQL5.5, see the metaoriteSQL package.
+Description: Query a Postgres Instance of the UMLS
+    Metathesaurus. Annotations sourced from the UMLS Documentation are
+    also provided to help the user interpret the fields for various use
+    cases. For MySQL5.5, see the metaoriteSQL package.
 License: Apache License 2.0
 Imports: 
-    magrittr,
-    rvest,
-    xml2,
-    R.cache,
-    SqlRender,
+    broca,
     dplyr,
+    magrittr,
+    pg13,
     purrr,
+    R.cache,
+    rubix,
+    rvest,
+    secretary,
+    SqlRender,
     stringr,
     tibble,
-    broca,
-    pg13,
-    rubix,
-    secretary
+    xml2
 Remotes: 
-     meerapatelmd/broca,
-     meerapatelmd/pg13,
-     meerapatelmd/rubix,
-     meerapatelmd/secretary
+    meerapatelmd/broca,
+    meerapatelmd/pg13,
+    meerapatelmd/rubix,
+    meerapatelmd/secretary
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

@@ -1,8 +1,8 @@
 # metaorite Package     
-Query a Postgres Instance of the UMLS Metathesaurus. For MySQL5.5, see the metaoriteSQL package.     
+Query a Postgres Instance of the UMLS Metathesaurus. Annotations sourced from the UMLS Documentation are also provided to help the user interpret the fields for various use cases. For MySQL5.5, see the [metaoriteSQL package](https://github.com/meerapatelmd/metaoriteSQL).     
 
 ## Prerequisites     
-UMLS Metathesaurus can be instantiated using the setupMetathesaurus Package.    
+Use [setupMetathesaurus Package](https://github.com/meerapatelmd/setupMetathesaurus) to instantiate your instance.     
 
 
 ## Code of Conduct
