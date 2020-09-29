@@ -7,7 +7,7 @@
 #' @param data          dataframe returned from a Metathesaurus query
 #'
 #' @name annotation_functions
-#' @noRd
+#' @keywords internal
 NULL
 
 

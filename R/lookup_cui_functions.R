@@ -1,7 +1,37 @@
-#' Query CUI
-#' @export
+#' @title
+#' Lookup CUI Functions
+#'
+#' @description
+#' Lookup the elements of a CUI
+#'
+#' @return
+#' Resultset of 1 or more rows
+#'
+#' @param conn Postgres Connection
+#' @param cui CUI
+#' @param schema Schema of MTH instance
+#'
+#' @name lookup_cui_functions
+#' @keywords internal
+NULL
 
-query_cui <-
+
+#' @title
+#' Lookup a CUI in MRCONSO Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @inheritParams lookup_cui_functions
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui
+#' @family cui lookup
+#' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
+
+
+lookup_cui <-
         function(conn,
                  cui,
                  schema = "mth") {
@@ -20,13 +50,22 @@ query_cui <-
         }
 
 
-#' Query for relationships
-#' @importFrom dplyr rename_all
-#' @importFrom dplyr left_join
-#' @importFrom dplyr rename_all
+#' @title
+#' Lookup a CUI in MRREL Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @details This function sets the `cui` argument to CUI1 in the MRREL Table. For the inverse relationship, see \code{\link{lookup_cui_inverse_rel}}
+#' @inheritParams lookup_cui_functions
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui_relationships
+#' @family cui lookup
 #' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
 
-query_cui_relationships <-
+lookup_cui_relationships <-
         function(conn,
                  cui,
                  schema = "mth") {
@@ -47,9 +86,22 @@ query_cui_relationships <-
         }
 
 
+#' @title
+#' Lookup a CUI in MRREL Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @inheritParams lookup_cui_functions
+#' @details This function sets the `cui` argument to CUI2in the MRREL Table. For the non-inverse relationship, see \code{\link{lookup_cui_relationships}}
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui_inverse_rel
+#' @family cui lookup
 #' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
 
-query_cui_inverse_rel <-
+lookup_cui_inverse_rel <-
         function(conn,
                  cui,
                  schema = "mth") {
@@ -69,11 +121,21 @@ query_cui_inverse_rel <-
                 )
         }
 
-#' Query for sermantic type
-#' @family query
+#' @title
+#' Lookup a CUI in the MRSTY Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @inheritParams lookup_cui_functions
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui_semantic_types
+#' @family cui lookup
 #' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
 
-query_cui_semantic_types <-
+lookup_cui_semantic_types <-
         function(conn,
                  cui,
                  schema = "mth") {
@@ -87,11 +149,21 @@ query_cui_semantic_types <-
         }
 
 
-#' Query for source context
-#' @family query
+#' @title
+#' Lookup a CUI in the MRHIER Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @inheritParams lookup_cui_functions
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui_source_context
+#' @family cui lookup
 #' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
 
-query_cui_source_context <-
+lookup_cui_source_context <-
         function(conn,
                  cui,
                  schema = "mth") {
@@ -105,11 +177,21 @@ query_cui_source_context <-
         }
 
 
-#' Query for Attributes
-#' @family query
+#' @title
+#' Lookup a CUI in the MRSAT Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @inheritParams lookup_cui_functions
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui_attributes
+#' @family cui lookup
 #' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
 
-query_cui_attributes <-
+lookup_cui_attributes <-
         function(conn,
                  cui,
                  schema = "mth") {
@@ -121,11 +203,21 @@ query_cui_attributes <-
         }
 
 
-#' Query for source definitions
-#' @family query
+#' @title
+#' Lookup a CUI in the MRDEF Table
+#'
+#' @inherit lookup_cui_functions description return
+#' @inheritParams lookup_cui_functions
+#' @seealso
+#'  \code{\link[pg13]{query}}
+#'  \code{\link[SqlRender]{render}}
+#' @rdname lookup_cui_source_defs
+#' @family cui lookup
 #' @export
+#' @importFrom pg13 query
+#' @importFrom SqlRender render
 
-query_cui_source_definitions <-
+lookup_cui_source_defs <-
         function(conn,
                  cui,
                  schema = "mth") {
