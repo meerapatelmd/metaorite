@@ -20,7 +20,6 @@ getVocabularyInfo <-
                         rvest::html_table()
         }
 
-
 #' @title
 #' Get Abbreviation Information
 #' @description
