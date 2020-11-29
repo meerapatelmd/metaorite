@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Query for Attributes — query_cui_attributes • metaorite</title>
+<title>Get Source Vocabulary Information — getVocabularyInfo • metaorite</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Query for Attributes — query_cui_attributes" />
-<meta property="og:description" content="Query for Attributes" />
+<meta property="og:title" content="Get Source Vocabulary Information — getVocabularyInfo" />
+<meta property="og:description" content="This function returns basic information on all the source vocabularies found in the UMLS Metathesaurus from the NIH site for UMLS Metathesaurus Vocabulary Documentation." />
 
 
 
@@ -89,7 +89,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/meerapatelmd/metaorite/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -103,24 +108,24 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Query for Attributes</h1>
-    
-    <div class="hidden name"><code>query_cui_attributes.Rd</code></div>
+    <h1>Get Source Vocabulary Information</h1>
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/nihSite.R'><code>R/nihSite.R</code></a></small>
+    <div class="hidden name"><code>getVocabularyInfo.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Query for Attributes</p>
+    <p>This function returns basic information on all the source vocabularies found in the UMLS Metathesaurus from the NIH site for <a href='https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html'>UMLS Metathesaurus Vocabulary Documentation</a>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>query_cui_attributes</span><span class='op'>(</span><span class='va'>conn</span>, <span class='va'>cui</span>, schema <span class='op'>=</span> <span class='st'>"mth"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>getVocabularyInfo</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <div class='dont-index'><p>Other query: 
-<code><a href='query_cui_semantic_types.html'>query_cui_semantic_types</a>()</code>,
-<code><a href='query_cui_source_context.html'>query_cui_source_context</a>()</code>,
-<code><a href='query_cui_source_definitions.html'>query_cui_source_definitions</a>()</code></p></div>
+    <p>A data frame of the table found at  <a href='https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html'>UMLS Metathesaurus Vocabulary Documentation</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function assumes that the table of interest is found at https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html. Future modifications may be needed to update the web address should it be changed.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

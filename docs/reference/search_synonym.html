@@ -89,7 +89,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/meerapatelmd/metaorite/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -104,7 +109,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Search for Synonyms</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/mrconso_search_functions.R'><code>R/mrconso_search_functions.R</code></a></small>
     <div class="hidden name"><code>search_synonym.Rd</code></div>
     </div>
 
@@ -128,12 +133,40 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>conn</th>
+      <td><p>Postgres connection</p></td>
+    </tr>
+    <tr>
+      <th>concept</th>
+      <td><p>Concept to be searched</p></td>
+    </tr>
+    <tr>
+      <th>schema</th>
+      <td><p>Metathesaurus schema</p></td>
+    </tr>
+    <tr>
       <th>search_styles</th>
       <td><p>One or more of "exact", "string", and/or "like" search styles that correspond with the <code><a href='search_exact.html'>search_exact</a></code>, <code><a href='search_string.html'>search_string</a></code>, and <code><a href='search_like.html'>search_like</a></code> functions respectively.</p></td>
     </tr>
     <tr>
       <th>split</th>
       <td><p>Regular expression to split the concept on to generate words for this style of search. Defaults to a space.</p></td>
+    </tr>
+    <tr>
+      <th>match_case</th>
+      <td><p>If TRUE, both the MRCONSO STR column and the `concept` argument are converted to lowercase.</p></td>
+    </tr>
+    <tr>
+      <th>cache_only</th>
+      <td><p>If TRUE, only the cache is loaded and database querying is skipped. If a cache did not exist for the query, a NULL will be returned.</p></td>
+    </tr>
+    <tr>
+      <th>skip_cache</th>
+      <td><p>If TRUE, the cache is skipped altogether. The database is directly queried and the resultset is not cached.</p></td>
+    </tr>
+    <tr>
+      <th>override_cache</th>
+      <td><p>If TRUE, the cache is not loaded, the database is directly queried and the resultset is cached, overwriting any existing cache that may have been present.</p></td>
     </tr>
     </table>
 
@@ -144,8 +177,8 @@
 
     <div class='dont-index'><p><code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code>
  <code><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind</a></code>,<code><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></code>,<code><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></code>,<code><a href='https://dplyr.tidyverse.org/reference/distinct.html'>distinct</a></code>
- <code><a href='https://rdrr.io/pkg/SqlRender/man/render.html'>render</a></code>
- <code><a href='https://rdrr.io/pkg/pg13/man/query.html'>query</a></code></p></div>
+ <code><a href='https://ohdsi.github.io/SqlRender/reference/render.html'>render</a></code>
+ <code><a href='https://meerapatelmd.github.io/pg13/reference/query.html'>query</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

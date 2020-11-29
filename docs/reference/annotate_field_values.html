@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Annotate Field Values — annotate_field_values" />
-<meta property="og:description" content="Annotate Field Values" />
+<meta property="og:description" content="These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation." />
 
 
 
@@ -89,7 +89,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/meerapatelmd/metaorite/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -104,12 +109,12 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Annotate Field Values</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/annotation_functions.R'><code>R/annotation_functions.R</code></a></small>
     <div class="hidden name"><code>annotate_field_values.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Annotate Field Values</p>
+    <p>These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.</p>
     </div>
 
     <pre class="usage"><span class='fu'>annotate_field_values</span><span class='op'>(</span><span class='va'>data</span>, <span class='va'>...</span><span class='op'>)</span></pre>
@@ -117,6 +122,10 @@
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>data</th>
+      <td><p>dataframe returned from a Metathesaurus query</p></td>
+    </tr>
     <tr>
       <th>...</th>
       <td><p>(optional) Columns in the data to annotate. If missing, all available annotations are provided for every column.</p></td>

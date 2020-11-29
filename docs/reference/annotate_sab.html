@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Annotate the SAB Field — annotate_sab" />
-<meta property="og:description" content="Annotate the SAB Field" />
+<meta property="og:description" content="These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation." />
 
 
 
@@ -89,7 +89,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/meerapatelmd/metaorite/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -104,16 +109,24 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Annotate the SAB Field</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/annotation_functions.R'><code>R/annotation_functions.R</code></a></small>
     <div class="hidden name"><code>annotate_sab.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Annotate the SAB Field</p>
+    <p>These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.</p>
     </div>
 
     <pre class="usage"><span class='fu'>annotate_sab</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>data</th>
+      <td><p>dataframe returned from a Metathesaurus query</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
