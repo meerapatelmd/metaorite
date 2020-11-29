@@ -1,14 +1,27 @@
-Package: metaorite
 Type: Package
+Package: metaorite
 Title: metaorite Package
 Version: 1.0.0
 Authors@R: 
-    person(given = "Meera", family = "Patel, MD", role = c("aut", "cre"), email = "patelmeeray@gmail.com")
-Description: This package provides functions that query the UMLS Metathesaurus META instantiated on a local MySQL5.5 server.
+    person(given = "Meera",
+           family = "Patel, MD",
+           role = c("aut", "cre"),
+           email = "patelmeeray@gmail.com",
+           comment = c(ORCID = "0000-0002-3401-3948"))
+Description: Query a Postgres Instance of the UMLS
+    Metathesaurus. Annotations sourced from the UMLS Documentation are
+    also provided to help the user interpret the fields for various use
+    cases. For MySQL5.5, see the metaoriteSQL package.
 License: Apache License 2.0
+Remotes: 
+    meerapatelmd/broca,
+    meerapatelmd/pg13,
+    meerapatelmd/rubix,
+    meerapatelmd/secretary
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-Imports:     DBI,    dplyr,    httr,    jsonlite,    magrittr,    purrr,    rubix,    rvest,    secretary,    stringr,    xml2,    R.cache,    SqlRender,    pg13,    preQLURL: https://meerapatelmd.github.io/metaorite/, https://github.com/meerapatelmd/metaorite/BugReports: https://github.com/meerapatelmd/metaorite/issues/
+URL: https://meerapatelmd.github.io/metaorite/, https://github.com/meerapatelmd/metaorite/
+BugReports: https://github.com/meerapatelmd/metaorite/issues/
 
 
