@@ -19,7 +19,7 @@ NULL
 #' @param ... (optional) Columns in the data to annotate. If missing, all available annotations are provided for every column.
 #'
 #' @details
-#' These annotations are derived from \code{\link{get_field_value_annotations}}
+#' These annotations are derived from \code{\link{doc_field_value_annotations}}
 #'
 #' @seealso
 #'  \code{\link[dplyr]{mutate_all}},\code{\link[dplyr]{select}},\code{\link[dplyr]{mutate-joins}}
@@ -52,7 +52,7 @@ annotate_field_values <-
 
                 }
 
-                field_value_annotation <- get_field_value_annotation()
+                field_value_annotation <- doc_field_value_annotation()
                 field_value_annotation <- field_value_annotation[names(field_value_annotation) %in% data_fields]
 
                 fields <- names(field_value_annotation)
@@ -89,7 +89,7 @@ annotate_field_values <-
 #' @inheritParams annotation_functions
 #'
 #' @details
-#' The annotations used in this function are derived from \code{\link{get_sab_annotation}}.
+#' The annotations used in this function are derived from \code{\link{doc_sab_annotation}}.
 #' @seealso
 #'  \code{\link[dplyr]{mutate}},\code{\link[dplyr]{mutate-joins}}
 #' @rdname annotate_sab
@@ -106,7 +106,7 @@ annotate_sab <-
                 }
 
 
-                sab_annotation <- get_sab_annotation()
+                sab_annotation <- doc_sab_annotation()
                 sab_annotation <-
                         sab_annotation %>%
                         dplyr::mutate(sab = Abbreviation)

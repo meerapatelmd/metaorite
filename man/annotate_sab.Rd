@@ -13,7 +13,7 @@ annotate_sab(data)
 These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.
 }
 \details{
-The annotations used in this function are derived from \code{\link{get_sab_annotation}}.
+The annotations used in this function are derived from \code{\link{doc_sab_annotation}}.
 }
 \seealso{
 \code{\link[dplyr]{mutate}},\code{\link[dplyr]{mutate-joins}}

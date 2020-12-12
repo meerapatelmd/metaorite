@@ -15,7 +15,7 @@ annotate_field_values(data, ...)
 These functions add extra fields to a dataframe that annotate the field value meaning with what is provided in the UMLS Web Documentation.
 }
 \details{
-These annotations are derived from \code{\link{get_field_value_annotations}}
+These annotations are derived from \code{\link{doc_field_value_annotations}}
 }
 \seealso{
 \code{\link[dplyr]{mutate_all}},\code{\link[dplyr]{select}},\code{\link[dplyr]{mutate-joins}}
