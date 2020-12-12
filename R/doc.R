@@ -15,7 +15,7 @@ NULL
 #' @export
 #' @importFrom tibble tribble
 
-get_readable_table_names <-
+doc_readable_table_names <-
         function() {
                 tibble::tribble(
                         ~Table,~RRF,
@@ -48,7 +48,7 @@ get_readable_table_names <-
 #' @export
 #' @importFrom tibble tribble
 
-get_mrconso_field_definitions <-
+doc_mrconso_field_definitions <-
         function() {
                 tibble::tribble(~Col,~Description,
                                 "CUI", "Unique identifier for concept",
@@ -84,7 +84,7 @@ Root Source Abbreviation (RSAB) — short form, no version information, for exam
 #' @export
 #' @importFrom tibble tribble
 
-get_field_definitions <-
+doc_field_definitions <-
         function() {
                 tibble::tribble(
                 ~Abbreviation,~Description,~Datatype,
@@ -219,7 +219,7 @@ get_field_definitions <-
 #' @export
 #' @importFrom tibble tribble
 
-get_fields_to_table_map <-
+doc_fields_to_table_map <-
         function() {
                 tibble::tribble(
                 ~Abbreviation,~Table,
@@ -565,7 +565,7 @@ get_fields_to_table_map <-
 #' @export
 #' @importFrom tibble tribble
 
-get_sab_annotation <-
+doc_sab_annotation <-
         function() {
                 tibble::tribble(
                 ~`Vocabulary`,~`Abbreviation`,~`Last Updated`,~`Language`,~`Restriction Level`,
@@ -800,7 +800,7 @@ get_sab_annotation <-
 #' @export
 #' @importFrom tibble tribble
 
-get_field_value_annotation <-
+doc_field_value_annotation <-
         function() {
                 list(
                         CXTY = tibble::tribble(
@@ -1674,7 +1674,7 @@ get_field_value_annotation <-
                                 "procedure_has_excised_anatomy", "procedure has excised anatomy",
                                 "procedure_has_imaged_anatomy", "procedure has imaged anatomy",
                                 "procedure_has_partially_excised_anatomy", "procedure has partially excised anatomy",
-                                "procedure_has_target_anatomy", "procedure has target anatomy",
+                                "procedure_has_tardoc_anatomy", "procedure has target anatomy",
                                 "procedure_may_have_completely_excised_anatomy", "procedure may have completely excised anatomy",
                                 "procedure_may_have_excised_anatomy", "procedure may have excised anatomy",
                                 "procedure_may_have_partially_excised_anatomy", "procedure may have partially excised anatomy",
@@ -1784,7 +1784,7 @@ get_field_value_annotation <-
                                 "surrounded_by", "Surrounded by",
                                 "surrounds", "Surrounds",
                                 "system_of", "System of",
-                                "target_anatomy_has_procedure", "target anatomy has procedure",
+                                "tardoc_anatomy_has_procedure", "target anatomy has procedure",
                                 "technique_of", "Technique of",
                                 "temporal_context_of", "Temporal context of",
                                 "temporally_followed_by", "Temporally followed by",
