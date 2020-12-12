@@ -1,0 +1,18 @@
+reference:
+    - title: Lookup CUI Details
+      desc: >
+        Lookup additional details about a CUI
+      contents:
+        - contains('lookup')
+    - title: Search MRCONSO
+      desc: >
+        Search for a phrase in MRCONSO using different search styles
+      contents:
+        - contains('search')
+    - title: Documentation
+      desc: >
+          Returns dataframes of pre-coded valuesets
+      contents:
+        - starts_with('doc_')
+
+
