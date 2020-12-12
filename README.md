@@ -6,7 +6,7 @@ Query a Postgres Instance of the UMLS Metathesaurus. Annotations sourced from th
 
 ## Prerequisites     
 
-Use [setupMetathesaurus Package](https://github.com/meerapatelmd/setupMetathesaurus) to instantiate a Postgres UMLS Metathesaurus.  
+Use [metathesaurus Package](https://meerapatelmd.github.io/metathesaurus/) to instantiate a Postgres UMLS Metathesaurus.  
 
 
 ## Code of Conduct  
