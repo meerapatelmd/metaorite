@@ -1,4 +1,4 @@
-# {metaorite Package} <img src="man/figures/logo.png" align="right" alt="" width="120" />      
+# metaorite Package <img src="man/figures/logo.png" align="right" alt="" width="120" />      
 <a href='https://www.freepik.com/vectors/star'>Star vector created by macrovector - www.freepik.com</a>  
 
 Query a Postgres Instance of the UMLS Metathesaurus. Annotations sourced from the UMLS Documentation are also provided to help the user interpret the fields for various use cases. For MySQL5.5, see the [metaoriteSQL package](https://github.com/meerapatelmd/metaoriteSQL).     
