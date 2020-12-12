@@ -9,10 +9,21 @@ reference:
         Search for a phrase in MRCONSO using different search styles
       contents:
         - contains('search')
+    - title: Annotate
+      desc: >
+        Annotate existing fields in a dataframe with extended definition fields.
+      contents:
+        - starts_with("annotate")
     - title: Documentation
       desc: >
           Returns dataframes of pre-coded valuesets
       contents:
         - starts_with('doc_')
+    - title: Crosswalk to OMOP
+      desc: >
+          Returns dataframes that facilitate crosswalking to the OMOP Vocabulary
+      contents:
+        - contains('_x_')
+
 
 
