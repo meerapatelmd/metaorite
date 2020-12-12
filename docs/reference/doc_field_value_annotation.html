@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lookup a CUI in the MRSAT Table — lookup_cui_attributes • metaorite</title>
+<title>Annotate Field Values with Details — doc_field_value_annotation • metaorite</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="Lookup a CUI in the MRSAT Table — lookup_cui_attributes" />
-<meta property="og:description" content="Lookup the elements of a CUI" />
+<meta property="og:title" content="Annotate Field Values with Details — doc_field_value_annotation" />
+<meta property="og:description" content="Get Maps Between Field-Value Pairs where the Value is abbreviated as show at https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metaorite</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -94,6 +94,9 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -116,48 +119,21 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Lookup a CUI in the MRSAT Table</h1>
-    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/lookup_cui_functions.R'><code>R/lookup_cui_functions.R</code></a></small>
-    <div class="hidden name"><code>lookup_cui_attributes.Rd</code></div>
+    <h1>Annotate Field Values with Details</h1>
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/doc.R'><code>R/doc.R</code></a></small>
+    <div class="hidden name"><code>doc_field_value_annotation.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Lookup the elements of a CUI</p>
+    <p>Get Maps Between Field-Value Pairs where the Value is abbreviated as show at <a href='https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html'>https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/columns_data_elements.html</a>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>lookup_cui_attributes</span><span class='op'>(</span><span class='va'>conn</span>, <span class='va'>cui</span>, schema <span class='op'>=</span> <span class='st'>"mth"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>doc_field_value_annotation</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>conn</th>
-      <td><p>Postgres Connection</p></td>
-    </tr>
-    <tr>
-      <th>cui</th>
-      <td><p>CUI</p></td>
-    </tr>
-    <tr>
-      <th>schema</th>
-      <td><p>Schema of MTH instance</p></td>
-    </tr>
-    </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Resultset of 1 or more rows</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://meerapatelmd.github.io/pg13/reference/query.html'>query</a></code>
- <code><a href='https://ohdsi.github.io/SqlRender/reference/render.html'>render</a></code></p>
-<p>Other cui lookup: 
-<code><a href='lookup_cui_inverse_rel.html'>lookup_cui_inverse_rel</a>()</code>,
-<code><a href='lookup_cui_relationships.html'>lookup_cui_relationships</a>()</code>,
-<code><a href='lookup_cui_semantic_types.html'>lookup_cui_semantic_types</a>()</code>,
-<code><a href='lookup_cui_source_context.html'>lookup_cui_source_context</a>()</code>,
-<code><a href='lookup_cui_source_defs.html'>lookup_cui_source_defs</a>()</code>,
-<code><a href='lookup_cui.html'>lookup_cui</a>()</code></p></div>
+    <div class='dont-index'><p><code><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

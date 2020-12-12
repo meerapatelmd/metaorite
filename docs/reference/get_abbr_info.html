@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Crosswalk Between Semantic Type and OMOP Domain Id — get_semantic_type_to_domain_id • metaorite</title>
+<title>Get Abbreviation Information — get_abbr_info • metaorite</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="Crosswalk Between Semantic Type and OMOP Domain Id — get_semantic_type_to_domain_id" />
-<meta property="og:description" content="Crosswalk Between Semantic Type and OMOP Domain Id" />
+<meta property="og:title" content="Get Abbreviation Information — get_abbr_info" />
+<meta property="og:description" content="Get all the tables that provide abbreviation information at the NIH site Abbreviations" />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">metaorite</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -94,6 +94,9 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -116,24 +119,26 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Crosswalk Between Semantic Type and OMOP Domain Id</h1>
-    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/crosswalk_to_omop_functions.R'><code>R/crosswalk_to_omop_functions.R</code></a></small>
-    <div class="hidden name"><code>get_semantic_type_to_domain_id.Rd</code></div>
+    <h1>Get Abbreviation Information</h1>
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/get.R'><code>R/get.R</code></a></small>
+    <div class="hidden name"><code>get_abbr_info.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Crosswalk Between Semantic Type and OMOP Domain Id</p>
+    <p>Get all the tables that provide abbreviation information at the NIH site <a href='https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html'>Abbreviations</a></p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_semantic_type_to_domain_id</span><span class='op'>(</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>get_abbr_info</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Note that this crosswalk is subjective and is constrained to the Observation, Device, Drug, Procedure, and Measurement domains only. If a Semantic Type is not applicable to OMOP, such as Fish and Reptile Semantic Types, they are given a Domain Id of NA. It is also important to note that the mappings between Semantic Type and OMOP Domain Id can be 1 to many.</p>
+    <p>A list of data frames scraped from <a href='https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html'>Abbreviations</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://tibble.tidyverse.org/reference/tribble.html'>tribble</a></code></p></div>
+    <div class='dont-index'><p><code><a href='http://xml2.r-lib.org/reference/read_xml.html'>read_xml</a></code>
+ <code><a href='https://rvest.tidyverse.org/reference/html_nodes.html'>html_nodes</a></code>,<code><a href='https://rvest.tidyverse.org/reference/html_table.html'>html_table</a></code>
+ <code><a href='https://purrr.tidyverse.org/reference/set_names.html'>set_names</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

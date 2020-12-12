@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>List Database Elements — list_functions • metaorite</title>
+<title>Get Source Vocabulary Information — get_vocab_info • metaorite</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="List Database Elements — list_functions" />
-<meta property="og:description" content="List details on the MTH database architecture" />
+<meta property="og:title" content="Get Source Vocabulary Information — get_vocab_info" />
+<meta property="og:description" content="This function returns basic information on all the source vocabularies found in the UMLS Metathesaurus from the NIH site for UMLS Metathesaurus Vocabulary Documentation." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -119,32 +119,24 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>List Database Elements</h1>
-    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/list.R'><code>R/list.R</code></a></small>
-    <div class="hidden name"><code>list_functions.Rd</code></div>
+    <h1>Get Source Vocabulary Information</h1>
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/get.R'><code>R/get.R</code></a></small>
+    <div class="hidden name"><code>get_vocab_info.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>List details on the MTH database architecture</p>
+    <p>This function returns basic information on all the source vocabularies found in the UMLS Metathesaurus from the NIH site for <a href='https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html'>UMLS Metathesaurus Vocabulary Documentation</a>.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>get_vocab_info</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>conn</th>
-      <td><p>Postgres Connection</p></td>
-    </tr>
-    <tr>
-      <th>schema</th>
-      <td><p>Schema of MTH instance</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Vector of 1 or more values</p>
+    <p>A data frame of the table found at  <a href='https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html'>UMLS Metathesaurus Vocabulary Documentation</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function assumes that the table of interest is found at https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html. Future modifications may be needed to update the web address should it be changed.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
