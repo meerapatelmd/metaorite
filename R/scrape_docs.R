@@ -21,6 +21,7 @@ NULL
 
 scrape_field_value_annotations <-
         function() {
+                Sys.sleep(5)
                 origin <- xml2::read_html("https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html")
 
                 tables <-
@@ -75,6 +76,8 @@ scrape_field_value_annotations <-
 
 scrape_vocabulary_annotations <-
         function() {
+
+                Sys.sleep(5)
                 origin <- xml2::read_html("https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html")
 
                 tables <-
