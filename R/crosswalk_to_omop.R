@@ -10,18 +10,18 @@ NULL
 
 
 #' @title
-#' Crosswalk Between Semantic Type and OMOP Domain Id
+#' Crosswalk Between UTS Semantic Type and OMOP Domain Id
 #'
 #' @details
 #' Note that this crosswalk is subjective and is constrained to the Observation, Device, Drug, Procedure, and Measurement domains only. If a Semantic Type is not applicable to OMOP, such as Fish and Reptile Semantic Types, they are given a Domain Id of NA. It is also important to note that the mappings between Semantic Type and OMOP Domain Id can be 1 to many.
 #'
 #' @seealso
 #'  \code{\link[tibble]{tribble}}
-#' @rdname get_semantic_type_to_domain_id
+#' @rdname semantic_type_x_domain_id
 #' @export
 #' @importFrom tibble tribble
 
-get_semantic_type_to_domain_id <-
+semantic_type_x_domain_id <-
         function() {
 
                 x <-
