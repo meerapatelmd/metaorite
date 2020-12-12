@@ -10,8 +10,9 @@
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_node html_table
 #' @importFrom magrittr %>%
+#' @rdname get_vocab_info
 
-getVocabularyInfo <-
+get_vocab_info <-
         function() {
                 url <- "https://www.nlm.nih.gov/research/umls/sourcereleasedocs/index.html"
                 data <- xml2::read_html(url)
@@ -30,14 +31,14 @@ getVocabularyInfo <-
 #'  \code{\link[xml2]{read_xml}}
 #'  \code{\link[rvest]{html_nodes}},\code{\link[rvest]{html_table}}
 #'  \code{\link[purrr]{set_names}}
-#' @rdname getAbbreviationInfo
 #' @export
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_nodes html_table
 #' @importFrom purrr set_names
 #' @importFrom magrittr %>%
+#' @rdname get_abbr_info
 
-getAbbreviationInfo <-
+get_abbr_info <-
         function() {
                 url <- "https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/release/abbreviations.html"
                 data <- xml2::read_html(url)
