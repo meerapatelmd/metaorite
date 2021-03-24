@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>List Fields — list_fields • metaorite</title>
+<title>Lookup a Code in MRCONSO Table — lookup_code • metaorite</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="List Fields — list_fields" />
-<meta property="og:description" content="Return a valueset to see what the possible values are in a given Field" />
+<meta property="og:title" content="Lookup a Code in MRCONSO Table — lookup_code" />
+<meta property="og:description" content="Lookup the elements of a CUI" />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -119,16 +119,16 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>List Fields</h1>
-    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/list.R'><code>R/list.R</code></a></small>
-    <div class="hidden name"><code>list_fields.Rd</code></div>
+    <h1>Lookup a Code in MRCONSO Table</h1>
+    <small class="dont-index">Source: <a href='https://github.com/meerapatelmd/metaorite/blob/master/R/lookup_code.R'><code>R/lookup_code.R</code></a></small>
+    <div class="hidden name"><code>lookup_code.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Return a valueset to see what the possible values are in a given Field</p>
+    <p>Lookup the elements of a CUI</p>
     </div>
 
-    <pre class="usage"><span class='fu'>list_fields</span><span class='op'>(</span><span class='va'>conn</span>, schema <span class='op'>=</span> <span class='st'>"mth"</span>, <span class='va'>table</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>lookup_code</span><span class='op'>(</span><span class='va'>conn</span>, <span class='va'>code</span>, <span class='va'>sab</span>, schema <span class='op'>=</span> <span class='st'>"mth"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -141,15 +141,11 @@
       <th>schema</th>
       <td><p>Schema of MTH instance</p></td>
     </tr>
-    <tr>
-      <th>table</th>
-      <td><p>MTH Table</p></td>
-    </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>List the fields in a MTH Table.</p>
+    <p>Resultset of 1 or more rows</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='https://meerapatelmd.github.io/pg13/reference/query.html'>query</a></code>
