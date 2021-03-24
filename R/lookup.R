@@ -40,10 +40,12 @@ lookup_cui <-
                 # schema = "mth"
 
                 pg13::query(conn = conn,
+                            sql_statement =
                             SqlRender::render(
-                                    "SELECT *
-                                        FROM @schema.MRCONSO
-                                        WHERE CUI = '@cui';",
+                                    "
+                                    SELECT *
+                                    FROM @schema.MRCONSO
+                                    WHERE CUI = '@cui';",
                                     cui = cui,
                                     schema = schema)
                 )
@@ -74,6 +76,7 @@ lookup_relationships <-
                 # schema = "mth"
 
                 pg13::query(conn = conn,
+                            sql_statement =
                                 SqlRender::render(
                                         "SELECT *
                                         FROM @schema.MRREL r
@@ -110,6 +113,7 @@ lookup_inverse_rel <-
                 # schema = "mth"
 
                 pg13::query(conn = conn,
+                            sql_statement =
                             SqlRender::render(
                                     "SELECT *
                                         FROM @schema.MRREL r
